@@ -7,11 +7,11 @@ function sumNumMatrix ( matrix ) {
     computeSum: if ( matrix ) {  // метка для выхода в случае ошибки
         for ( let i = 0; i < matrix.length; i++ ) {
             let row = matrix[i];
-            if ( !row ) break computeSum;
+            if ( !row ) break computeSum; // выход при ошибке матрице
 
             for ( let j = 0; j < row.length; j++) {
                 let num = row[j];
-                if ( num !== num ) break computeSum;
+                if ( num !== num ) break computeSum;  // выход если элементы матрицы = NaN
 
                 sum += num;
             }
@@ -20,5 +20,5 @@ function sumNumMatrix ( matrix ) {
 
     }
     return success;
-    
+
 }
